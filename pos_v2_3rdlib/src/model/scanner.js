@@ -17,9 +17,7 @@ BarcodeScanner.prototype.scan = function(inputs) {
 
     var itemSpilt = input.split('-');
 
-    for(var j = 0; j < (itemSpilt[1] || 1); j++){
-      barcodelist.push(itemSpilt[0]);
-    }
+    barcodelist.push({'barcode':itemSpilt[0],'quantity':(Number(itemSpilt[1]) || 1)});
 
   });
 
